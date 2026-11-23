@@ -64,12 +64,19 @@
   .offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
   .card h4 { margin: 0 0 6px; font-size: 18px; } .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .about { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 40px; }
+  .badge { width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #2EE6A8); color: #fff; font-weight: 800; font-size: 56px; letter-spacing: -.03em; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow); }
+  .about h2 { margin-bottom: 16px; }
+  .about p { margin: 0 0 14px; color: var(--muted); max-width: 680px; }
+  .about p.big { font-size: 20px; color: var(--ink); }
+  .tools { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
   .cta { text-align: center; padding: 80px 0 96px; }
   .cta p { color: var(--muted); margin: 0 auto 26px; max-width: 520px; }
   footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--faint); font-size: 13px; }
   footer p { margin: 0 0 6px; }
   @media (max-width: 900px) {
-    header.hero, .item, .item.vertical { grid-template-columns: 1fr; gap: 24px; }
+    header.hero, .item, .item.vertical, .about { grid-template-columns: 1fr; gap: 24px; }
+    .about { padding: 28px 22px; } .badge { width: 104px; height: 104px; font-size: 38px; }
     .item.vertical .player { max-width: 380px; width: 100%; }
     .steps, .offer { grid-template-columns: 1fr 1fr; }
     .navlinks { display: none; }
@@ -81,7 +88,7 @@
 <div class="wrap">
   <nav>
     <a class="logo" href="#">Ryan J.</a>
-    <div class="navlinks"><a href="#work">Work</a><a href="#process">Process</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div class="navlinks"><a href="#work">Work</a><a href="#process">Process</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   </nav>
 
   <header class="hero">
@@ -193,6 +200,20 @@
       <div class="card"><h4>Launch video</h4><p>A 20–30 s hero video for a launch, Product Hunt or your landing page.</p></div>
       <div class="card"><h4>App promo</h4><p>A vertical 9:16 cut for TikTok, Reels, Shorts and the App Store.</p></div>
       <div class="card"><h4>Feature clip</h4><p>A 10–15 s loop showing one feature, for announcements and docs.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div class="badge" aria-hidden="true">RJ</div>
+      <div>
+        <h2>About me</h2>
+        <p class="big">I'm Ryan, a student who builds launch videos in code.</p>
+        <p>Instead of keyframing by hand, I build every frame as React components with Remotion. I rebuild your real product UI, plan each shot in a storyboard, and compose the music and sound effects to match the picture.</p>
+        <p>Because the whole video is code, changes are fast. A new headline, price or counter value is a quick edit and a re-render, not a new project. I care about the small things that make a product feel fast: easing, timing, and sound that lands on the beat.</p>
+        <p>I'm early in my freelance work, so every project gets my full attention, and you'll see progress at every step.</p>
+        <div class="tools"><span class="tag">Remotion</span><span class="tag">React + TypeScript</span><span class="tag">Claude</span><span class="tag">ffmpeg</span><span class="tag">Original sound design</span></div>
+      </div>
     </div>
   </section>
 
