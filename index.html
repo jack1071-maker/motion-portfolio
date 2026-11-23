@@ -210,7 +210,7 @@
 </footer>
 <script>
   // Set this to your Upwork profile URL once it exists. Until then, the Upwork buttons stay hidden.
-  const UPWORK_URL = '';
+  const UPWORK_URL = 'https://www.upwork.com/freelancers/~01b034e307ce62fa89';
   document.querySelectorAll('[data-upwork]').forEach(a => { if (UPWORK_URL) { a.href = UPWORK_URL; a.target = '_blank'; a.rel = 'noopener'; } else a.style.display = 'none'; });
   // Only one video plays with sound at a time.
   document.querySelectorAll('.player video').forEach(v => v.addEventListener('play', () => document.querySelectorAll('.player video').forEach(o => { if (o !== v) o.pause(); })));
