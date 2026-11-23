@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ryan Jackson Local Promos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Short promo videos and social graphics for Ellicott City businesses, built in code from each business's own logo, photos and colours.">
+<meta property="og:title" content="Ryan Jackson · Promo videos for local businesses">
+<meta property="og:description" content="Short 9:16 promo videos and social graphics built from your own logo, photos and colours. Free sample first, pay what it's worth.">
+<meta property="og:image" content="media/okd-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a quiet "contact sheet" frame. Phone-shaped screens carry the colour; the page stays ink on paper with one cobalt signal. */
+:root{
+  --paper:#f3f4f1;
+  --card:#ffffff;
+  --ink:#16181d;
+  --muted:#5d636e;
+  --line:#dcdfe0;
+  --accent:#2747e0;
+  --accent-ink:#ffffff;
+  --screen:#0d0e11;
+  --font-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --step--1:clamp(.78rem,.75rem + .15vw,.85rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);
+  --step-3:clamp(2.3rem,1.6rem + 3.4vw,4.6rem);
+  --radius-screen:22px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#111317; --card:#1a1d22; --ink:#eceef1; --muted:#9aa1ad; --line:#2a2e35;
+    --accent:#8ea2ff; --accent-ink:#0d1020; --screen:#000;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111317; --card:#1a1d22; --ink:#eceef1; --muted:#9aa1ad; --line:#2a2e35;
+  --accent:#8ea2ff; --accent-ink:#0d1020; --screen:#000;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 var(--step-0)/1.6 var(--font-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.02}
+p{margin:0}
+.label{font:500 var(--step--1)/1.3 var(--font-mono);letter-spacing:.04em;color:var(--muted)}
+.tag{display:inline-flex;align-items:center;gap:.4em;font:500 .72rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;
+  padding:.42em .65em;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--card);white-space:nowrap;justify-self:start;width:max-content}
+.tag::before{content:"";width:.5em;height:.5em;border-radius:50%;background:var(--accent)}
+
+/* Top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.1rem;border-bottom:1px solid var(--line)}
+.top .name{font:800 1.05rem/1 var(--font-display);font-stretch:112%;letter-spacing:-.01em;text-decoration:none}
+.top nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+.top nav a{font-size:var(--step--1);text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+
+/* Intro */
+.intro{display:grid;gap:1.5rem;padding-block:clamp(2.5rem,6vw,5rem) clamp(2rem,4vw,3rem)}
+.intro h1{font-size:var(--step-3);font-weight:850;font-stretch:78%;letter-spacing:-.015em;max-width:16ch}
+.intro h1 em{font-style:normal;color:var(--accent)}
+.intro .lede{font-size:var(--step-1);line-height:1.5;max-width:44ch;color:var(--ink)}
+.intro .lede span{color:var(--muted)}
+.intro .row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:600 var(--step-0)/1 var(--font-body);text-decoration:none;
+  padding:.85em 1.2em;border-radius:999px;background:var(--accent);color:var(--accent-ink);border:0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+
+.honesty{font-size:var(--step--1);color:var(--muted);max-width:62ch;border-left:2px solid var(--accent);padding-left:.9rem;line-height:1.55}
+
+/* Phone screen */
+.screen{position:relative;aspect-ratio:9/16;width:100%;max-width:100%;border-radius:var(--radius-screen);overflow:hidden;background:var(--screen);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent),0 18px 40px -18px rgba(10,12,20,.45)}
+.screen video,.screen img{width:100%;height:100%;object-fit:cover}
+.sound{position:absolute;left:10px;bottom:10px;display:inline-flex;align-items:center;gap:.45em;
+  font:600 .78rem/1 var(--font-body);color:#fff;background:rgba(10,10,14,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.18);padding:.6em .8em;border-radius:999px;cursor:pointer}
+.sound svg{width:14px;height:14px}
+.sound[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.screen .badge{position:absolute;right:10px;top:10px;font:500 .66rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;background:rgba(10,10,14,.55);padding:.45em .6em;border-radius:6px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* Featured */
+.featured{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;
+  padding-block:clamp(1.5rem,3vw,2.5rem);border-top:1px solid var(--line)}
+.featured .copy{display:grid;gap:1.1rem;min-width:0}
+.featured h2{font-size:var(--step-2);font-weight:850;font-stretch:80%}
+.featured .quote{font:800 var(--step-1)/1.1 var(--font-display);font-stretch:70%;text-transform:uppercase;letter-spacing:.02em}
+.featured .quote b{color:#d62d20}
+.featured p{max-width:52ch;color:var(--muted)}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.6rem 1.2rem;margin:0;padding:1rem 0 0;border-top:1px dashed var(--line)}
+.specs div{display:grid;gap:.15rem}
+.specs dt{font:500 .68rem/1.2 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.specs dd{margin:0;font:500 .9rem/1.3 var(--font-mono);font-variant-numeric:tabular-nums}
+.mini{display:grid;grid-template-columns:1fr .5625fr;gap:.75rem;max-width:420px}
+
+/* Section headers */
+.sec{padding-block:clamp(2.5rem,5vw,4rem) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.sec-head h2{font-size:var(--step-2);font-weight:850;font-stretch:80%}
+.sec-head p{color:var(--muted);max-width:46ch}
+
+/* Business cards */
+.biz-list{display:grid;gap:1rem}
+.biz{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1.25rem 2rem;padding:1.25rem;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.biz .meta{display:grid;align-content:start;gap:.6rem;min-width:0}
+.biz h3{font-size:var(--step-1);font-weight:800;font-stretch:90%}
+.biz .meta p{font-size:.92rem;color:var(--muted)}
+.pieces{display:grid;gap:.75rem;align-items:start;min-width:0}
+.pieces.v{grid-template-columns:.5625fr 1fr .5625fr}
+.pieces.g{grid-template-columns:1fr .5625fr;max-width:560px}
+.piece{display:grid;gap:.4rem;min-width:0}
+.piece figcaption{font:500 .68rem/1.2 var(--font-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.thumb{display:block;padding:0;border:0;background:var(--screen);border-radius:12px;overflow:hidden;cursor:zoom-in;width:100%;
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent)}
+.thumb img{width:100%;height:auto;transition:transform .4s ease}
+.thumb:hover img{transform:scale(1.03)}
+@media (prefers-reduced-motion: reduce){.thumb img{transition:none}}
+.pieces .screen{border-radius:12px}
+
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;display:grid;gap:.5rem;align-content:start;padding:1.25rem 1.25rem 1.4rem;border-top:3px solid var(--ink)}
+.steps li::before{content:"Step " counter(s);font:500 .72rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.steps h3{font-size:var(--step-1);font-weight:800;font-stretch:90%}
+.steps p{color:var(--muted);font-size:.95rem}
+.build{margin-top:1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.5rem 1.5rem;padding:1.1rem 1.25rem;
+  border:1px dashed var(--line);border-radius:12px;font:400 .86rem/1.5 var(--font-mono);color:var(--muted)}
+.build b{color:var(--ink);font-weight:500}
+
+/* About + contact */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}
+.about p{max-width:56ch}
+.about p + p{margin-top:.9rem}
+.contact{display:grid;gap:1rem;padding:clamp(1.25rem,3vw,2rem);background:var(--ink);color:var(--paper);border-radius:18px}
+.contact h2{font-size:var(--step-2);font-weight:850;font-stretch:80%}
+.contact .label{color:color-mix(in srgb,var(--paper) 65%,transparent)}
+.email{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.email code{font:500 clamp(.95rem,.8rem + .8vw,1.25rem)/1.3 var(--font-mono);user-select:all;overflow-wrap:anywhere}
+.contact .btn{background:var(--paper);color:var(--ink)}
+.contact .btn.ghost{background:transparent;color:var(--paper);border-color:color-mix(in srgb,var(--paper) 30%,transparent)}
+.contact .links{display:flex;flex-wrap:wrap;gap:.6rem}
+.copied{font:500 .75rem/1 var(--font-mono);color:color-mix(in srgb,var(--paper) 70%,transparent)}
+
+footer{margin-top:clamp(2.5rem,5vw,4rem);padding-block:1.5rem 2rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between}
+footer p{font-size:var(--step--1);color:var(--muted);max-width:70ch}
+
+/* Lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,900px);max-height:92vh}
+dialog.lb::backdrop{background:rgba(8,9,12,.86)}
+dialog.lb img{max-height:86vh;width:auto;margin:0 auto;border-radius:10px}
+dialog.lb button{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));
+  font:600 .85rem/1 var(--font-body);background:#fff;color:#111;border:0;border-radius:999px;padding:.7em 1em;cursor:pointer}
+dialog.lb p{color:#cfd3da;font:500 .75rem/1.4 var(--font-mono);text-align:center;margin-top:.6rem}
+
+@media (max-width: 820px){
+  .featured{grid-template-columns:1fr;justify-items:center}
+  .featured .screen{max-width:340px}
+  .featured .copy{justify-self:stretch}
+  .biz{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width: 520px){
+  .top nav{display:none}
+  .pieces.v{grid-template-columns:1fr .5625fr}
+  .intro{gap:1.1rem;padding-block:1.75rem 1.5rem}
+  .intro .lede{font-size:var(--step-0)}
+  .intro .btn.ghost{display:none}
+  .pieces.v .piece:first-child{grid-column:1 / -1;justify-self:center;width:min(100%,300px)}
+  .pieces.v .piece.story{grid-column:auto}
+  .biz{padding:1rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="name" href="#top">Ryan Jackson</a>
+  <nav aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#how">How it works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="intro">
+  <span class="tag">Ellicott City, MD</span>
+  <h1>Short promo videos for <em>local businesses</em>, built from your own brand.</h1>
+  <p class="lede">I'm Ryan, a Purdue engineering junior who lives in Ellicott City. I make 10–15 second vertical videos and social graphics for shops, studios and cafés around Howard County. <span>Every frame is built in code from your logo, photos, fonts and colours. No AI video generators, no stock templates.</span></p>
+  <div class="row">
+    <a class="btn" href="#contact">Get a free sample</a>
+    <a class="btn ghost" href="#work">See the work</a>
+  </div>
+  <p class="honesty">Everything on this page is a <strong>sample concept</strong> I made on my own for a local business to show what's possible. None of it was commissioned, and these businesses aren't clients and haven't endorsed this page. Logos, photos and names belong to their owners.</p>
+</section>
+
+<section class="featured" id="work" aria-labelledby="okd-title">
+  <div class="screen">
+    <video id="v-okd" src="media/okd-teaser.mp4" poster="media/okd-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Okinawan Karate Dojo sample promo video"></video>
+    <span class="badge">Sample concept</span>
+    <button class="sound" type="button" data-video="v-okd" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path class="w" d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
+      <span>Tap for sound</span>
+    </button>
+  </div>
+  <div class="copy">
+    <span class="label">Featured · Ellicott City &amp; Catonsville</span>
+    <h2 id="okd-title">Okinawan Karate Dojo</h2>
+    <p class="quote">Forged<b>.</b> Focused<b>.</b> Ready<b>.</b></p>
+    <p>Their red seal stamps in, then cuts through real class photos from the dojo's own site: a yellow-belt line-up, a student mid-form, a sensei with a new white belt. Each word lands on a sound hit, and it closes on the logo, the class list and the phone number.</p>
+    <dl class="specs">
+      <div><dt>Length</dt><dd>12.5 s, with sound</dd></div>
+      <div><dt>Format</dt><dd>9:16 · Reels, TikTok, Shorts</dd></div>
+      <div><dt>Master</dt><dd>2160 × 3840 (4K)</dd></div>
+      <div><dt>Made from</dt><dd>Their logo, photos, colours</dd></div>
+    </dl>
+    <div class="mini">
+      <figure class="piece" style="margin:0">
+        <button class="thumb" type="button" data-full="media/okd-post.jpg" data-cap="Okinawan Karate Dojo · square post · sample concept"><img src="media/okd-post.jpg" alt="Square Instagram post for Okinawan Karate Dojo reading READY, with a sensei and a young student" loading="lazy" width="1080" height="1080"></button>
+        <figcaption>Post · 1:1</figcaption>
+      </figure>
+      <figure class="piece story" style="margin:0">
+        <button class="thumb" type="button" data-full="media/okd-story.jpg" data-cap="Okinawan Karate Dojo · story · sample concept"><img src="media/okd-story.jpg" alt="Instagram story for Okinawan Karate Dojo reading Forged. Focused. Ready." loading="lazy" width="1080" height="1920"></button>
+        <figcaption>Story · 9:16</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="more-title">
+  <div class="sec-head">
+    <h2 id="more-title">More sample concepts</h2>
+    <p>Each set uses only that business's own logo, website photos and brand colours.</p>
+  </div>
+
+  <div class="biz-list">
+    <article class="biz">
+      <div class="meta">
+        <span class="tag">Sample concept</span>
+        <h3>JS Taekwondo</h3>
+        <p>Ellicott City. The JS mark builds from their red and blue, then opens onto competition photos: "Elite training in Ellicott City. Developing champions."</p>
+        <span class="label">Video 11 s · post · story</span>
+      </div>
+      <div class="pieces v">
+        <figure class="piece" style="margin:0">
+          <div class="screen">
+            <video id="v-jst" src="media/jst-teaser.mp4" poster="media/jst-poster.jpg" muted loop playsinline preload="metadata" aria-label="JS Taekwondo sample promo video"></video>
+          </div>
+          <figcaption>Video · 9:16</figcaption>
+        </figure>
+        <figure class="piece" style="margin:0">
+          <button class="thumb" type="button" data-full="media/jst-post.jpg" data-cap="JS Taekwondo · square post · sample concept"><img src="media/jst-post.jpg" alt="Square post for JS Taekwondo reading Elite training, with a sparring match" loading="lazy" width="1080" height="1080"></button>
+          <figcaption>Post · 1:1</figcaption>
+        </figure>
+        <figure class="piece story" style="margin:0">
+          <button class="thumb" type="button" data-full="media/jst-story.jpg" data-cap="JS Taekwondo · story · sample concept"><img src="media/jst-story.jpg" alt="Story for JS Taekwondo reading Built for champions" loading="lazy" width="1080" height="1920"></button>
+          <figcaption>Story · 9:16</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="biz">
+      <div class="meta">
+        <span class="tag">Sample concept</span>
+        <h3>Sweet Elizabeth Jane</h3>
+        <p>Boutique on Main Street. Script logo, the shop's own photos and a vintage serif: "Urban girl. Happy home. Vintage soul."</p>
+        <span class="label">Video 11 s with sound · post · story</span>
+      </div>
+      <div class="pieces v">
+        <figure class="piece" style="margin:0">
+          <div class="screen">
+            <video id="v-sej" src="media/sej-teaser.mp4" poster="media/sej-poster.jpg" muted loop playsinline preload="metadata" aria-label="Sweet Elizabeth Jane sample promo video"></video>
+            <button class="sound" type="button" data-video="v-sej" aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
+              <span>Tap for sound</span>
+            </button>
+          </div>
+          <figcaption>Video · 9:16</figcaption>
+        </figure>
+        <figure class="piece" style="margin:0">
+          <button class="thumb" type="button" data-full="media/sej-post.jpg" data-cap="Sweet Elizabeth Jane · square post · sample concept"><img src="media/sej-post.jpg" alt="Square post for Sweet Elizabeth Jane reading Vintage soul" loading="lazy" width="1080" height="1080"></button>
+          <figcaption>Post · 1:1</figcaption>
+        </figure>
+        <figure class="piece story" style="margin:0">
+          <button class="thumb" type="button" data-full="media/sej-story.jpg" data-cap="Sweet Elizabeth Jane · story · sample concept"><img src="media/sej-story.jpg" alt="Story for Sweet Elizabeth Jane reading Urban girl, Happy home, Vintage soul" loading="lazy" width="1080" height="1920"></button>
+          <figcaption>Story · 9:16</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="biz">
+      <div class="meta">
+        <span class="tag">Sample concept</span>
+        <h3>Little Market Cafe</h3>
+        <p>Old Ellicott City. Latte art, courtyard concerts and the cafe's hand-lettered logo: "Artisan coffee. Amazing food. Live music."</p>
+        <span class="label">Video 11 s with sound · post · story</span>
+      </div>
+      <div class="pieces v">
+        <figure class="piece" style="margin:0">
+          <div class="screen">
+            <video id="v-lmc" src="media/lmc-teaser.mp4" poster="media/lmc-poster.jpg" muted loop playsinline preload="metadata" aria-label="Little Market Cafe sample promo video"></video>
+            <button class="sound" type="button" data-video="v-lmc" aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>
+              <span>Tap for sound</span>
+            </button>
+          </div>
+          <figcaption>Video · 9:16</figcaption>
+        </figure>
+        <figure class="piece" style="margin:0">
+          <button class="thumb" type="button" data-full="media/lmc-post.jpg" data-cap="Little Market Cafe · square post · sample concept"><img src="media/lmc-post.jpg" alt="Square post for Little Market Cafe reading Live music in the courtyard" loading="lazy" width="1080" height="1080"></button>
+          <figcaption>Post · 1:1</figcaption>
+        </figure>
+        <figure class="piece story" style="margin:0">
+          <button class="thumb" type="button" data-full="media/lmc-story.jpg" data-cap="Little Market Cafe · story · sample concept"><img src="media/lmc-story.jpg" alt="Story for Little Market Cafe reading Artisan coffee. Amazing food. Live music." loading="lazy" width="1080" height="1920"></button>
+          <figcaption>Story · 9:16</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="biz">
+      <div class="meta">
+        <span class="tag">Sample concept</span>
+        <h3>Old Mill Cafe</h3>
+        <p>Historic Ellicott City. Bold condensed type over their brunch and crêpe photos: "Coffee. Dessert. Eats."</p>
+        <span class="label">Post · story</span>
+      </div>
+      <div class="pieces g">
+        <figure class="piece" style="margin:0">
+          <button class="thumb" type="button" data-full="media/omc-post.jpg" data-cap="Old Mill Cafe · square post · sample concept"><img src="media/omc-post.jpg" alt="Square post for Old Mill Cafe reading Casual eats, over eggs on toast" loading="lazy" width="1080" height="1080"></button>
+          <figcaption>Post · 1:1</figcaption>
+        </figure>
+        <figure class="piece story" style="margin:0">
+          <button class="thumb" type="button" data-full="media/omc-story.jpg" data-cap="Old Mill Cafe · story · sample concept"><img src="media/omc-story.jpg" alt="Story for Old Mill Cafe reading Coffee. Dessert. Eats." loading="lazy" width="1080" height="1920"></button>
+          <figcaption>Story · 9:16</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="how" aria-labelledby="how-title">
+  <div class="sec-head">
+    <h2 id="how-title">How it works</h2>
+    <p>You see the finished piece before you pay anything.</p>
+  </div>
+  <ol class="steps">
+    <li>
+      <h3>I make a free sample</h3>
+      <p>I build a short video or graphic from your own logo, website photos, fonts and colours. Tell me what you want to promote, or I'll pick something from your site.</p>
+    </li>
+    <li>
+      <h3>You see it first</h3>
+      <p>I send it over as a link you can watch on your phone. Ask for changes to wording, photos or offers. There's no cost and no obligation.</p>
+    </li>
+    <li>
+      <h3>Pay what it's worth</h3>
+      <p>If you want to use it, pay what you think it's worth to your business. You get the 4K video and full-size graphics, ready to post.</p>
+    </li>
+  </ol>
+  <div class="build">
+    <span><b>Built in code.</b> Each frame is drawn on an HTML canvas.</span>
+    <span><b>Rendered at 4K.</b> Frame by frame in headless Chrome, encoded with ffmpeg.</span>
+    <span><b>Sized for every feed.</b> 9:16 video, 1:1 post, 9:16 story.</span>
+  </div>
+</section>
+
+<section class="sec about" id="contact" aria-labelledby="contact-title">
+  <div>
+    <span class="label">About</span>
+    <p style="margin-top:.6rem">I'm an engineering student at Purdue and I live in Ellicott City. A lot of local places have great photos on their websites and not much moving on their social feeds. These samples show what those photos can become in a few seconds of video.</p>
+    <p>I also make motion work for software companies. That portfolio is separate and linked here.</p>
+  </div>
+  <div class="contact">
+    <h2 id="contact-title">Want a free sample for your business?</h2>
+    <span class="label">Email me</span>
+    <div class="email">
+      <code id="email">ryankjackson06@gmail.com</code>
+      <button class="btn ghost" type="button" id="copy">Copy</button>
+      <span class="copied" id="copied" aria-live="polite"></span>
+    </div>
+    <div class="links">
+      <a class="btn" href="mailto:ryankjackson06@gmail.com?subject=Free%20sample%20for%20my%20business">Write an email</a>
+      <a class="btn ghost" href="https://jack1071-maker.github.io/motion-portfolio/">SaaS motion portfolio →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Ryan Jackson · Ellicott City, MD</p>
+  <p>All work shown is unsolicited sample concepts. Brand names, logos and photos belong to their owners and are shown only to demonstrate the work.</p>
+</footer>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Full-size image">
+  <button type="button" id="lb-close">Close</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</dialog>
+
+<script>
+(function(){
+  var videos = Array.prototype.slice.call(document.querySelectorAll('video'));
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Play muted videos only while they're on screen.
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if (e.isIntersecting && e.intersectionRatio > 0.35){ if (!reduce || !v.muted){ var p = v.play(); if (p && p.catch) p.catch(function(){}); } }
+        else if (!e.isIntersecting){ v.pause(); }
+      });
+    }, {threshold:[0,0.35,0.6]});
+    videos.forEach(function(v){ io.observe(v); });
+  }
+  if (reduce){ videos.forEach(function(v){ v.removeAttribute('autoplay'); v.pause(); v.controls = true; }); }
+
+  // Sound toggle: restart from the top with sound, mute everything else.
+  document.querySelectorAll('.sound').forEach(function(btn){
+    var v = document.getElementById(btn.dataset.video);
+    var label = btn.querySelector('span');
+    btn.addEventListener('click', function(){
+      if (v.muted){
+        videos.forEach(function(o){ if (o !== v) o.muted = true; });
+        v.muted = false; v.currentTime = 0;
+        var p = v.play(); if (p && p.catch) p.catch(function(){});
+        btn.setAttribute('aria-pressed','true'); label.textContent = 'Sound on';
+      } else {
+        v.muted = true;
+        btn.setAttribute('aria-pressed','false'); label.textContent = 'Tap for sound';
+      }
+    });
+  });
+
+  // Silent videos: tap to pause / play.
+  videos.forEach(function(v){
+    v.addEventListener('click', function(){ if (v.paused){ v.play().catch(function(){}); } else { v.pause(); } });
+  });
+
+  // Lightbox for graphics.
+  var lb = document.getElementById('lb'), img = document.getElementById('lb-img'), cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.thumb').forEach(function(t){
+    t.addEventListener('click', function(){
+      img.src = t.dataset.full; img.alt = t.querySelector('img').alt; cap.textContent = t.dataset.cap || '';
+      if (lb.showModal) lb.showModal(); else window.open(t.dataset.full, '_blank');
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+
+  // Copy email.
+  var copyBtn = document.getElementById('copy'), copied = document.getElementById('copied'), email = document.getElementById('email');
+  copyBtn.addEventListener('click', function(){
+    var txt = email.textContent;
+    function sel(){ var r = document.createRange(); r.selectNodeContents(email); var s = getSelection(); s.removeAllRanges(); s.addRange(r); copied.textContent = 'Selected. Press copy.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ copied.textContent = 'Copied'; }, sel);
+    } else { sel(); }
+  });
+})();
+</script>
+</body>
+</html>
