@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan J. · Launch videos for SaaS and apps</title>
+<meta name="description" content="Short, high-end launch videos and motion ads for SaaS products and apps, built in code with original sound design.">
+<meta property="og:title" content="Ryan J. · Launch videos for SaaS and apps">
+<meta property="og:description" content="Short, high-end launch videos and motion ads for SaaS products and apps.">
+<meta property="og:image" content="media/duolingo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF9; --surface: #FFFFFF; --ink: #111113; --muted: #5F6168; --faint: #9A9CA3; --line: #E7E7E4;
+    --accent: #3D5AFE; --chip: #F1F1EE; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 40px rgba(0,0,0,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #0D0D10; --surface: #16161A; --ink: #F3F3F5; --muted: #A3A4AC; --faint: #6D6E76; --line: #26262C; --accent: #8C9EFF; --chip: #1E1E24; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px rgba(0,0,0,.4); }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 Inter, system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+  .logo { font-weight: 800; letter-spacing: -.02em; font-size: 19px; text-decoration: none; }
+  .navlinks { display: flex; gap: 22px; font-size: 15px; color: var(--muted); }
+  .navlinks a { text-decoration: none; } .navlinks a:hover { color: var(--ink); }
+  header.hero { padding: 56px 0 40px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  h1 { font-size: clamp(38px, 5.4vw, 64px); line-height: 1.04; letter-spacing: -.035em; margin: 0 0 20px; font-weight: 800; }
+  h1 span { color: var(--muted); }
+  .lede { font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 28px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 12px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .heroVid { border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); background: #000; aspect-ratio: 16/9; }
+  .heroVid video { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .proof { display: flex; gap: 28px; flex-wrap: wrap; color: var(--muted); font-size: 14px; padding: 8px 0 56px; border-bottom: 1px solid var(--line); }
+  .proof b { color: var(--ink); font-weight: 600; }
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(28px, 3.4vw, 38px); letter-spacing: -.03em; margin: 0 0 10px; font-weight: 800; }
+  .sub { color: var(--muted); margin: 0 0 40px; max-width: 640px; }
+  .work { display: grid; gap: 56px; }
+  .item { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center; }
+  .item.vertical { grid-template-columns: 420px 1fr; }
+  .player { position: relative; border-radius: 16px; overflow: hidden; background: #000; box-shadow: var(--shadow); aspect-ratio: 16/9; }
+  .item.vertical .player { aspect-ratio: 9/16; max-height: 720px; }
+  .player video { width: 100%; height: 100%; display: block; object-fit: contain; background: #000; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .tag { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+  .tag.lead { background: var(--ink); color: var(--bg); }
+  h3 { font-size: 28px; letter-spacing: -.025em; margin: 0 0 8px; font-weight: 800; }
+  .brief { font-size: 18px; margin: 0 0 16px; }
+  ul.how { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 15.5px; }
+  ul.how li { padding: 7px 0 7px 22px; position: relative; border-top: 1px solid var(--line); }
+  ul.how li::before { content: ""; position: absolute; left: 4px; top: 16px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .step .n { width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .step h4 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.01em; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+  .offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .card h4 { margin: 0 0 6px; font-size: 18px; } .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .cta { text-align: center; padding: 80px 0 96px; }
+  .cta p { color: var(--muted); margin: 0 auto 26px; max-width: 520px; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--faint); font-size: 13px; }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 900px) {
+    header.hero, .item, .item.vertical { grid-template-columns: 1fr; gap: 24px; }
+    .item.vertical .player { max-width: 380px; width: 100%; }
+    .steps, .offer { grid-template-columns: 1fr 1fr; }
+    .navlinks { display: none; }
+  }
+  @media (max-width: 560px) { .steps, .offer { grid-template-columns: 1fr; } section { padding: 52px 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">Ryan J.</a>
+    <div class="navlinks"><a href="#work">Work</a><a href="#process">Process</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Launch videos for SaaS and apps. <span>Built in code.</span></h1>
+      <p class="lede">Short, high-end product animations for launches, landing pages and social. Real UI, shots that turn into each other, and original sound design. Changes are quick because every frame is code.</p>
+      <div class="btns">
+        <a class="btn primary" href="#work">See the work</a>
+        <a class="btn" href="#contact" data-upwork>Hire me on Upwork →</a>
+      </div>
+    </div>
+    <div class="heroVid"><video src="media/duolingo.mp4" poster="media/duolingo.jpg" autoplay muted loop playsinline aria-label="Duolingo spec ad (muted preview)"></video></div>
+  </header>
+  <div class="proof"><span><b>5</b> launch videos</span><span><b>4K</b> masters</span><span><b>16:9 and 9:16</b> formats</span><span><b>Original</b> music and sound</span></div>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="sub">The spec ads are unofficial practice pieces for real brands, made to show what I'd make for you. Turn the sound on.</p>
+    <div class="work">
+
+      <article class="item">
+        <div class="player"><video src="media/duolingo.mp4" poster="media/duolingo.jpg" controls preload="none" playsinline></video></div>
+        <div>
+          <div class="tags"><span class="tag lead">Spec ad</span><span class="tag">18 s</span><span class="tag">4K</span><span class="tag">3D UI</span></div>
+          <h3>Duolingo</h3>
+          <p class="brief">The daily lesson loop in one continuous take: open the app, answer, keep the streak.</p>
+          <ul class="how">
+            <li>Every shot morphs into the next: Duo becomes the lesson button, the button becomes the card, and the streak days melt back into Duo.</li>
+            <li>The learning path and lesson are rebuilt in 3D, with depth of field and motion blur.</li>
+            <li>An original score and UI sound effects are cued to every beat.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item vertical">
+        <div class="player"><video src="media/forkcast.mp4" poster="media/forkcast.jpg" controls preload="none" playsinline></video></div>
+        <div>
+          <div class="tags"><span class="tag lead">App promo</span><span class="tag">9:16 vertical</span><span class="tag">30 s</span><span class="tag">3D phone</span></div>
+          <h3>Forkcast</h3>
+          <p class="brief">A vertical promo for a calorie-tracking app: snap your food, see the calories, hit your goal.</p>
+          <ul class="how">
+            <li>Made for TikTok, Reels and App Store previews.</li>
+            <li>A 3D phone with real in-app screens, a camera scan and a live calorie ring.</li>
+            <li>Ends on the app with a clear call to action.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="player"><video src="media/calcom.mp4" poster="media/calcom.jpg" controls preload="none" playsinline></video></div>
+        <div>
+          <div class="tags"><span class="tag lead">Spec ad</span><span class="tag">30 s</span><span class="tag">SaaS</span></div>
+          <h3>Cal.com</h3>
+          <p class="brief">One booking link replaces an 11-email back-and-forth.</p>
+          <ul class="how">
+            <li>Opens on the pain point: email threads piling up around a kinetic headline.</li>
+            <li>A recreated booking page: pick a day, pick a time, confirm, and a counter drops from 11 to 0.</li>
+            <li>The payoff shows the same meeting in four time zones.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="player"><video src="media/linear.mp4" poster="media/linear.jpg" controls preload="none" playsinline></video></div>
+        <div>
+          <div class="tags"><span class="tag lead">Spec ad</span><span class="tag">30 s</span><span class="tag">Dev tools</span></div>
+          <h3>Linear</h3>
+          <p class="brief">Hand an issue to an agent and watch it ship.</p>
+          <ul class="how">
+            <li>A minimal dark style matched to the brand.</li>
+            <li>A ⌘K command menu, an agent picking up the issue and statuses moving to done.</li>
+            <li>A synth score with typing and click cues.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="player"><video src="media/plotwise.mp4" poster="media/plotwise.jpg" controls preload="none" playsinline></video></div>
+        <div>
+          <div class="tags"><span class="tag lead">Concept product</span><span class="tag">30 s</span><span class="tag">Productivity</span></div>
+          <h3>Plotwise</h3>
+          <p class="brief">A launch video for a made-up day planner that schedules your tasks in one click.</p>
+          <ul class="how">
+            <li>Problem → reveal → demo → payoff, the classic launch structure.</li>
+            <li>Tasks fly into a schedule, with a focus-hours counter and a camera push.</li>
+            <li>Shows how I'd launch a product that has no brand yet.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How it works</h2>
+    <p class="sub">The same four steps every time, so you know what you're getting before anything is animated.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Brief and assets</h4><p>Your product, audience, length and where it will run, plus your logo, fonts and screenshots.</p></div>
+      <div class="step"><div class="n">2</div><h4>Storyboard</h4><p>A numbered storyboard showing each shot and how it turns into the next. Nothing is built until you approve it.</p></div>
+      <div class="step"><div class="n">3</div><h4>Build and review</h4><p>I animate it and send it for notes. Timing changes are a code edit, not a re-shoot.</p></div>
+      <div class="step"><div class="n">4</div><h4>Sound and delivery</h4><p>Sound design and music cued to the picture, delivered as a 4K master plus the cuts you need.</p></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What I make</h2>
+    <p class="sub">Most projects are 15–30 seconds.</p>
+    <div class="offer">
+      <div class="card"><h4>Launch video</h4><p>A 20–30 s hero video for a launch, Product Hunt or your landing page.</p></div>
+      <div class="card"><h4>App promo</h4><p>A vertical 9:16 cut for TikTok, Reels, Shorts and the App Store.</p></div>
+      <div class="card"><h4>Feature clip</h4><p>A 10–15 s loop showing one feature, for announcements and docs.</p></div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Have a product to launch?</h2>
+    <p>Send me the product and the date. I'll reply with an idea for the video and a storyboard plan.</p>
+    <a class="btn primary" data-upwork href="#">Message me on Upwork →</a>
+  </section>
+</div>
+<footer>
+  <div class="wrap">
+    <p>© 2026 Ryan J. · Motion design</p>
+    <p>Spec ads are unofficial portfolio pieces, not affiliated with or endorsed by Duolingo, Cal.com or Linear. Names and logos belong to their owners. Plotwise is a made-up product.</p>
+  </div>
+</footer>
+<script>
+  // Set this to your Upwork profile URL once it exists. Until then, the Upwork buttons stay hidden.
+  const UPWORK_URL = '';
+  document.querySelectorAll('[data-upwork]').forEach(a => { if (UPWORK_URL) { a.href = UPWORK_URL; a.target = '_blank'; a.rel = 'noopener'; } else a.style.display = 'none'; });
+  // Only one video plays with sound at a time.
+  document.querySelectorAll('.player video').forEach(v => v.addEventListener('play', () => document.querySelectorAll('.player video').forEach(o => { if (o !== v) o.pause(); })));
+</script>
+</body>
+</html>
